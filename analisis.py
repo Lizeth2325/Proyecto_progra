@@ -43,3 +43,43 @@ df = pd.concat([train, test_full], ignore_index=True)
 
 # %% [markdown]
 # ## 9. Conclusiones finales (Integrante A)
+# 1. Tamaño del conjunto de datos
+filas, columnas = df.shape
+print(f"Dimensiones del DataFrame: {filas} registros y {columnas} variables.")
+
+# 2. Tipos de variables e información de valores no nulos
+print("\n--- Estructura y tipos de datos ---")
+df.info()
+
+# 3. Resumen estadístico de variables numéricas
+print("\n--- Estadísticas descriptivas de variables numéricas ---")
+display(df.describe().round(2))
+
+# 4. Resumen descriptivo de variables categóricas
+print("\n--- Estadísticas descriptivas de variables categóricas ---")
+display(df.describe(include=['object']))
+# %% [markdown]
+# ## 1. Carga e inspección inicial de los datos  (Integrante A)
+# %%
+# 1. Tamaño del conjunto de datos
+filas, columnas = df.shape
+print(f"Dimensiones del DataFrame: {filas} registros y {columnas} variables.")
+
+# 2. Tipos de variables e información de valores no nulos
+print("\n--- Estructura y tipos de datos ---")
+df.info()
+
+# 3. Resumen estadístico de variables numéricas
+print("\n--- Estadísticas descriptivas de variables numéricas ---")
+display(df.describe().round(2))
+
+# 4. Resumen descriptivo de variables categóricas
+print("\n--- Estadísticas descriptivas de variables categóricas ---")
+display(df.describe(include=['object']))
+
+# %% [markdown]
+# **Conclusión Ítem 1:**
+# 1. El conjunto de datos unificado contiene 1309 registros y 12 columnas.
+# 2. Contiene variables categóricas (`Name`, `Sex`, `Ticket`, `Cabin`, `Embarked`), numéricas discretas (`PassengerId`, `Pclass`, `SibSp`, `Parch`, `Survived`) y continuas (`Age`, `Fare`).
+# 3. La edad promedio es de 29.88 años y la tarifa promedio de 33.30 con alta variabilidad.
+# 4. Existen valores nulos considerables en `Cabin` (más del 70%) y en `Age` (263 registros), así como datos ausentes en `Fare` (1) y `Embarked` (2), que serán tratados en el Ítem 2.
