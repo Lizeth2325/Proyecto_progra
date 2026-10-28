@@ -126,4 +126,4 @@ print(f"Age: Límite superior = {lim_sup_a:.2f}, Límite inferior = {lim_inf_a:.
 # **Conclusión Ítem 3:**
 # 1. **Tarifa (`Fare`):** Exhibe una distribución marcadamente asimétrica a la derecha con 171 valores atípicos (13.06% del total) por encima de $66.34, alcanzando un máximo de $512.33. No se consideran errores de registro sino boletos de suites de primera clase y viajes familiares en grupo.
 # 2. **Edad (`Age`):** Muestra una distribución cercana a la normalidad con únicamente 9 valores atípicos superiores (pasajeros entre 66 y 80 años) y 0 observaciones atípicas inferiores.
-# 3. **Decisión analítica:** Se conservan estos datos atípicos para no descartar información socioeconómica y demográfica determinante en la supervivencia.
+# 3. **Decisión analítica:** Se conservan estos datos atípicos para no descartar información socioeconómica y demográfica determinante en la supervivencia.git add analisis.py
