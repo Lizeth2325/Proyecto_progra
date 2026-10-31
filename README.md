@@ -9,7 +9,7 @@ Dataset "Titanic - Machine Learning from Disaster" de Kaggle.
 https://www.kaggle.com/code/parvathicg/titanic/input
 
 ## Estructura de los datos
-1002 registros y 12 variables. Cada fila representa un pasajero. Tiene 5 variables categóricas, 2 numéricas continuas y 5 numéricas discretas.
+1309 registros y 12 variables. Cada fila representa un pasajero. Tiene 5 variables categóricas, 2 numéricas continuas y 5 numéricas discretas.
 
 ## Diccionario de datos
 | Variable | Tipo | Descripción | Valores / unidades |
