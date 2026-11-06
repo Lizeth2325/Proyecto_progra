@@ -73,22 +73,25 @@ for col in variables_numericas:
 
 # %% [markdown]
 # ## 5. Creación de variables  (Integrante A)
-
 # %%
 df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
 df["IsAlone"] = (df["FamilySize"] == 1).astype(int)
+df["FarePerPerson"] = df["Fare"] / df["FamilySize"]
+df["Title"] = df["Name"].str.extract(r" ([A-Za-z]+)\.", expand=False)
 df["AgeGroup"] = pd.cut(
     df["Age"],
     bins=[0, 12, 18, 35, 60, 100],
     labels=["Niño", "Adolescente", "Adulto joven", "Adulto", "Mayor"],
 )
-df[["SibSp", "Parch", "FamilySize", "IsAlone", "Age", "AgeGroup"]].head(10)
+df[["SibSp", "Parch", "FamilySize", "IsAlone", "FarePerPerson", "Title", "Age", "AgeGroup"]].head(10)
 
 # %% [markdown]
-# **Conclusión:** se crearon tres variables. `FamilySize` suma `SibSp`, `Parch`
+# **Conclusión:** se crearon cinco variables. `FamilySize` suma `SibSp`, `Parch`
 # y el propio pasajero; `IsAlone` vale 1 si viaja solo (790 pasajeros) y 0 si
-# va acompañado (519); `AgeGroup` agrupa la edad en cinco categorías y queda
-# vacía en los 263 pasajeros sin edad.
+# va acompañado (519); `FarePerPerson` divide la tarifa entre el tamaño de la
+# familia (variable numérica continua); `Title` extrae el tratamiento del
+# nombre (Mr, Mrs, Miss, etc.); `AgeGroup` agrupa la edad en cinco categorías
+# y queda vacía en los 263 pasajeros sin edad.
 
 # %% [markdown]
 # ## 6. Filtrado y condiciones en pandas  (Integrante B)
