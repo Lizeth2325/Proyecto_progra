@@ -72,6 +72,7 @@ for col in variables_numericas:
 # ## 4. Valores inconsistentes y duplicados  (Integrante B)
 
 # %% [markdown]
+
 # ## 5. Creación de variables  (Integrante A)
 # %%
 df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
