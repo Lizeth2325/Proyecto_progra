@@ -153,6 +153,9 @@ train_df.groupby("AgeGroup", observed=True)["Survived"].agg(["mean", "count"])
 #    1309 pasajeros). Por edad, los niños sobrevivieron más (58.0 %) y los
 #    mayores de 60 menos (22.7 %, aunque solo hay 22 pasajeros en ese grupo).
 # 5. **Limitaciones de los datos:** `Cabin` no tiene dato en 1014 pasajeros
-#    (cerca del 77 %) y `Age` en 263 (cerca del 20 %). Además, `Survived` solo
-#    existe para 891 pasajeros, así que las conclusiones de supervivencia se
-#    basan solo en el `train`.
+#    (cerca del 77 %) y se eliminó; `Age` falta en 263 (cerca del 20 %) y se
+#    imputó con la mediana, lo que limita el análisis por edad. No había
+#    duplicados. `Survived` solo existe para 891 pasajeros, así que las
+#    conclusiones de supervivencia se basan solo en el `train`. Además, las
+#    relaciones con `Survived` son moderadas o débiles (`Pclass` −0.34,
+#    `Fare` 0.26), por lo que ninguna variable la explica por sí sola.
