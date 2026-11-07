@@ -128,8 +128,9 @@ train_df.groupby("Sex")["Survived"].mean()
 train_df.groupby("Pclass")["Survived"].mean()
 
 # %% [markdown]
-# **Conclusión 2:** la supervivencia baja con la clase: 63.0 % en primera,
-# 47.3 % en segunda y 24.2 % en tercera.
+# **Conclusión 2:
+
+#  **Clase social y tarifa:** la supervivencia baja con la clase: 63.0 % en primera, 47.3 % en segunda y 24.2 % en tercera. La tarifa promedio también cae de 87.5 en primera a 21.2 en segunda y 13.3 en tercera.
 
 # %%
 df.groupby("Pclass")["Fare"].mean()
@@ -142,9 +143,9 @@ df.groupby("Pclass")["Fare"].mean()
 train_df.groupby("IsAlone")["Survived"].mean()
 
 # %% [markdown]
-# **Conclusión 4:** quienes viajaban acompañados sobrevivieron más (50.6 %)
-# que quienes viajaban solos (30.4 %).
-
+# **Conclusión 4:
+# 
+# **Variables nuevas:** viajar acompañado se asocia con más supervivencia (50.6 % frente a 30.4 % de quienes viajaban solos, que son 790 de los 1309 pasajeros). Por edad, los niños sobrevivieron más (58.0 %) y los mayores de 60 menos (22.7 %, aunque solo hay 22 pasajeros en ese grupo).
 # %%
 train_df.groupby("AgeGroup", observed=True)["Survived"].agg(["mean", "count"])
 

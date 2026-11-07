@@ -35,7 +35,7 @@ https://www.kaggle.com/code/parvathicg/titanic/input
 ## Conclusiones
 1. (Integrante A)
 
-Solo el 38,4 % de los pasajeros sobrevivió (342 de 891), así que el conjunto tiene más fallecidos que sobrevivientes
+*Sexo y supervivencia:* el sexo fue el factor con mayor diferencia. Sobrevivió el 74,2 % de las mujeres frente al 18,9 % de los hombres (solo pasajeros del train, que son los que tienen Survived).
 
 2. (Integrante B)
 
@@ -44,7 +44,8 @@ El sexo fue el factor más fuerte: sobrevivió el 74,2 % de las mujeres frente a
 
 3. (Integrante A)
 
-La tarifa (Fare) presenta valores extremos, con 20 pasajeros por encima de 200 y un máximo de 512,33. Son datos reales de pasajeros de primera clase, no errores, y por eso se conservan.
+*Valores atípicos:* Fare tiene 171 valores atípicos por el criterio del IQR y llega hasta 512,3. Se conservan porque corresponden a tarifas altas de primera clase, no a errores de captura.
+
 
 
 4. (Integrante B)
@@ -54,4 +55,4 @@ La calidad de los datos es buena, con una excepción: Cabin se eliminó por tene
 
 5. (Integrante A)
 
-La clase del pasajero marca la supervivencia: sobrevivió el 63,0 % en primera clase, el 47,3 % en segunda y solo el 24,2 % en tercera.
+*Limitaciones de los datos:* Cabin no tiene dato en 1014 pasajeros (cerca del 77 %) y se eliminó; Age falta en 263 (cerca del 20 %) y se imputó con la mediana, lo que limita el análisis por edad. No había duplicados. Survived solo existe para 891 pasajeros, así que las conclusiones de supervivencia se basan solo en el train. Además, las relaciones con Survived son moderadas o débiles (Pclass −0,34, Fare 0,26), por lo que ninguna variable la explica por sí sola.
